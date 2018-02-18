@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Pokedex</title>
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Harmattan" rel="stylesheet">
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -15,17 +17,24 @@
 </head>
 <body>
   <header>
-    <!--no olvidar el logo-->
-    <img src="logo!!!!" alt="">
-  </header>
-	<!-- inicio contenedor con busqueda del pokemon -->
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-12 col-sm-12 col-xs-12">
+  				<!--no olvidar el logo-->
+    			<img class="img-responsive img-logo center-block" src="assets/img/Pokemon_Logo.png" alt="">
+  			</div>
+  		</div>
+  	</div>
+    </header>
 	<section>
 		<div class="container-fluid pokemon-one">
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<h2>POKEDEX</h2>
+				<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+					<h2 class="title-one">POKEDEX</h2>
+				</div>			
+				<div class="col-md-12 col-sm-12 col-xs-12 text-center">
 					<form action='' id="pokeform">
-						<label for="search-keyword" class="visuallyhidden">Introduce el nombre del Pokemon que quieres buscar</label>
+						<label for="search-keyword" class="visuallyhidden label-poke">Introduce el nombre del Pokemon que quieres buscar</label>
 						<br>
 						<input type="text" id='pokeName' placeholder="¿Quien es ese Pokemon!?" name="" required>
 						<!-- <input id="search-keyword" type="text" name="search-keyword" placeholder="e.g. Android" required> -->
@@ -42,7 +51,7 @@
 	<section>
 		<div class="container-fluid poke-container">		
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5">
 					<!-- aqui deberia ir la info del pokemon -->
 					<div id="contenedorPokemon" class="pokecontenedor"></div>
 				</div>

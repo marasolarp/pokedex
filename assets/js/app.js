@@ -1,5 +1,4 @@
 
-
 // traer los elementos del html que se usaran
 // traer formulario
 const form = document.getElementById('pokeform');// form
@@ -46,16 +45,16 @@ function addPoke() {
   const height = data.height;
   const weight = data.weight;	
 	 const poke = 
-	`<div class="col-xs-6 col-md-4 col-md-3  text-center cardPoke" data-toggle="modal" data-target="#myModal">
+	`<div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5 text-center cardPoke" data-toggle="modal" data-target="#myModal">
 	 	<div class="pokemon"><img src="${pokeImg}" alt=""></div>
-	 	<div class="namePoke">${name}</div>
+	 	<div class="namePoke">${name.toUpperCase()}</div>
 	</div>
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade modal-poke" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header modal-poke1">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">${name}</h4>
+        <h4 class="modal-title">${name.toUpperCase()}</h4>
       </div>
       <div class="modal-body">
         <table class="centered bordered">
@@ -85,7 +84,7 @@ function addPoke() {
 				</table>
 			</div>
 			<div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

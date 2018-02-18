@@ -1,0 +1,31 @@
+body{
+	background-image: url(..//img/images.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	width: 100%;
+	margin:0;
+	padding: 0;
+}
+.namePoke, contenedorPokemon{
+	text-align: center;
+}
+.img-logo{
+	width: 40%;
+}
+.title-one{
+	font-family: 'Bungee Inline', cursive;
+    margin: 0;
+    margin-bottom: 1em!import;
+    font-size: 4em;
+}
+.label-poke{
+	font-family: 'Harmattan', sans-serif;
+	font-size: 2em;
+}
+.modal-poke{
+background-color: blue;
+}
+.modal-poke1{
+	background-color: yellow;
+}

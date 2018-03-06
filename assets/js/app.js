@@ -1,29 +1,28 @@
 
 // traer los elementos del html que se usaran
-// traer formulario
-const form = document.getElementById('pokeform');// form
+const form = document.getElementById('pokeform');
 // input ingreso nombre pokemon
-const searchPoke = document.getElementById('pokeName');// label - input
+const searchPoke = document.getElementById('pokeName');
 // contenedor donde ira el resultado
 const contenedorPokemon = document.getElementById('contenedorPokemon');
 let searchedForPokemon;
 
 // Evento submit del formulario e instrucciones a ejecutar 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {//Mostrar una alerta cuando se envía un formulario
   e.preventDefault();
-  contenedorPokemon.innerHTML = '';
+  contenedorPokemon.innerHTML = '';//
   searchedForPokemon = searchPoke.value;
   getPokemon();
 });
 
-// llamando los datos de la  api
+// llamando los datos de la  api usando xhr
 function getPokemon() {
-  // creando objeto con el new
+  // se crea una instancia..(objeto)
   const pokeRequest = new XMLHttpRequest();
   pokeRequest.open('GET', `https://pokeapi.co/api/v2/pokemon/${searchedForPokemon}`);
   pokeRequest.onload = addPoke;
   pokeRequest.onerror = handleError;
-  // enviando la peticion
+//envio la peticion
   pokeRequest.send();
 }
 // funcion que muestra el mensaje de error 
